@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>SANGEH DESTINATION</title>
     <style>
+        :root {
+      --main-color: #00712d;
+      --hover-color: #6b4423;
+      --card-bg-color: #f8f8ee;
+      }
         body {
           padding: 0;
           margin: 0;
@@ -14,37 +21,501 @@
           font-family: "Poppins", serif;
           scroll-behavior: smooth;
         }
+
+        .banner_content {
+          width: 100%;
+          height: 100vh;
+          background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0.6),
+              rgba(0, 0, 0, 0.6)
+            ),
+            url("../image/pancorSolas.jpg");
+          background-position: center;
+          background-size: cover;
+        }
+
+        .moto {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          width: 1024px;
+          height: 100%;
+          position: relative;
+        }
+
+        .main_moto > h1 {
+          font-size: 110px;
+          line-height: 110px;
+          color: white;
+          width: 60%;
+          margin-left: 40px;
+        }
+
+        .location {
+          position: absolute;
+          bottom: 40px;
+          right: 0px;
+          display: flex;
+          align-items: center;
+          padding-right: 30px;
+        }
+
+        .location > a {
+          font-size: 13px;
+          color: white;
+        }
+
+        .location-icon {
+          stroke: white;
+        }
+        
+        .footer {
+      width: 100%;
+      background-color: #ededed;
+        display: flex;
+        justify-content: center;
+      }
+
+      .footer-container {
+        max-width: 1024px;
+        margin: 100px 0 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        
+      }
+
+      /* footer underline */
+      .footer-title-underline {
+        margin-top: -8px;
+        width: 80%;
+        height: 2px;
+        background-color: var(--main-color);
+      }
+
+      .footer-menu-title {
+        color: var(--main-color);
+        width: fit-content;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px;
+      }
+
+      .footer-nav-link > li {
+        list-style: none;
+      }
+
+      .footer-nav-link a {
+        color: var(--hover-color);
+      }
+
+      .footer-nav-link a:hover {
+        color: var(--main-color);
+        transition: 0.3s;
+      }
+
+      .footer-contact-title {
+        color: var(--main-color);
+        width: fit-content;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px;
+      }
+
+      .footer-contact-link > li {
+        list-style: none;
+      }
+
+      .footer-contact-link a {
+        color: var(--hover-color);
+      }
+
+      .footer-contact-link a:hover {
+        color: var(--main-color);
+        transition: 0.3s;
+      }
+
+      .footer-about-title {
+        color: var(--main-color);
+        width: fit-content;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px;
+      }
+
+      .footer-about p {
+        color: var(--hover-color);
+      }
+
+      .footer-line {
+        background-color: var(--hover-color);
+        width: 80%;
+        height: 1px;
+      }
+      .carousel-inner .card-img-top {
+        width: 100%;        
+        height: 200px;       
+        object-fit: cover;   
+      }
     </style>
 </head>
 <body>
     <!-- nav bar start -->
-    <nav class="navbar navbar-expand-lg bg-transparent navbar-dark fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand text-black font-weight-bold" href="#"><strong>Monkey Forest <br> 
-            Sangeh</strong></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                  <a class="nav-link font-weight-bold text-black" href="#"><strong>HOME</strong></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link font-weight-bold text-black" href="../F&B/F&B_destination.html"><strong>FOOD AND BEFERAGE</strong></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link font-weight-bold text-black" href="../about-sangeh/about.html"><strong>ABOUT MONKEY FOREST</strong></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link font-weight-bold text-black" href="../contact/contact.html"><strong>CONTACT</strong></a>
-                </li>
-              </ul>
+     <div class="Navbar">
+      <nav class="navbar navbar-expand-lg bg-transparent navbar-dark fixed-top position-absolute">
+          <div class="container-fluid">
+            <h1 class="navbar-brand text-white font-weight-bold" href="" style="margin-left: 40px;"><strong>Sangeh</strong></h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>`
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-white" href="#"><strong>Home</strong></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-white" href="#"><strong>About </strong></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-white" href="#"><strong>Destination<strong></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-white" href="#"><strong>F&B</strong></a>
+                  </li>
+                </ul>
+                <div class="d-flex align-items-center" style="margin-left: 50px; justify-content: space-between;">
+                  <a href="https://instagram.com" class="text-white me-3" target="_blank">
+                      <i class="bi bi-instagram"></i> 
+                  </a>
+                  <a href="https://twitter.com" class="text-white me-3" target="_blank">
+                      <i class="bi bi-twitter"></i> 
+                  </a>
+                  <a href="https://facebook.com" class="text-white" target="_blank">
+                      <i class="bi bi-facebook"></i>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- nav end -->
+
+      <!-- banner -->
+      <div> 
+        <div class="banner_content">
+          <div class="moto">
+            <div class="main_moto">
+              <h1>WELCOME TAMAN MUMBUL PANCORAN </h1>
+            </div>
+            <div class="location">
+              <svg
+                class="location-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-map-pin"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+
+              <a
+                target="_blank"
+                href="https://maps.app.goo.gl/KSGEwB1U7uHAecYt7
+                "
+                >Sangeh, Kec. Abiansemal, Kabupaten Badung </a
+              >
+            </div>
           </div>
         </div>
-      </nav>
-      <!-- nav -->
-    
+      </div>
+
+      <!-- about sangeh -->
+      <div class="about-sangeh py-3" style="background-color: #7d9271;">
+        <div class="about-content">
+          <div class="about-title">
+            <h1 class="text-decoration-underline" style="text-align: center; font-weight: bold;">About Taman Mumbul Pancoran</h1>
+            <span class="title_underline"></span>
+          </div>
+          <div class="about-desc">
+            <p style="text-align: center; font-weight: normal; margin-top: 5px;">
+              Taman Mumbul Pancoran adalah destinasi wisata alam dan spiritual yang terletak di Desa Sangeh, Kecamatan Abiansemal, Kabupaten Badung, Bali. Tempat ini terkenal karena keindahan danau alaminya yang tenang, suasana asri yang dikelilingi pepohonan hijau, serta keberadaan pura suci di tengah kawasan. Taman ini sering dijadikan tempat meditasi, ritual keagamaan, dan rekreasi keluarga yang mencari ketenangan dan kesejukan alam.Salah satu daya tarik utama Taman Mumbul Pancoran adalah Pura Ulun Mumbul, sebuah pura suci yang digunakan untuk persembahyangan umat Hindu. Selain itu, terdapat pancoran (mata air suci) yang dipercaya memiliki khasiat spiritual dan sering digunakan untuk upacara melukat atau pembersihan diri secara rohani. Air di pancoran ini sangat jernih dan berasal langsung dari sumber alami.Dengan suasana damai dan pemandangan yang indah, Taman Mumbul Pancoran juga menjadi tempat yang ideal untuk bersantai, menikmati udara segar, atau berfoto dengan latar alam yang memukau. Wisatawan diharapkan tetap menghormati kesucian tempat ini dengan menjaga kebersihan dan mengikuti aturan adat setempat, seperti mengenakan kain atau selendang saat memasuki area pura. Taman ini adalah perpaduan sempurna antara wisata alam, budaya, dan spiritual di Bali.  
+            </p>
+          </div>
+          <div class="about-gallery">
+            <h1 class="text-decoration-underline" style="text-align: center; font-weight: bold;">Gallery</h1>
+            <span class="title_underline"></span>
+          </div>
+          <div class="container mt-5" style="margin-bottom: 40px;">
+            <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+        
+                <!-- Slides -->
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="../image/pancoran 1.jpg" class="card-img-top" alt="Card 1">
+                                    <div class="card-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="../image/pancoran 2.jpg" class="card-img-top" alt="Card 2">
+                                    <div class="card-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="../image/pancoran 3.jpg" class="card-img-top" alt="Card 3">
+                                    <div class="card-body">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="../image/pancoran 4.jpg" class="card-img-top" alt="Card 4">
+                                    <div class="card-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="../image/pancoran 5.jpg" class="card-img-top" alt="Card 5">
+                                    <div class="card-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="../image/pancoran 6.jpg" class="card-img-top" alt="Card 6">
+                                    <div class="card-body">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- destination -->
+      <div class="about-destination" style="background-color: #ffffff; margin-top: 10px;">
+        <div class="destination-content">
+          <div class="destination-title">
+            <h1 class="text-decoration-underline" style="margin-top: 0; text-align: center;font-weight: bold;">Destination</h1>
+            <span class="title_underline"></span>
+          </div>
+          <div class="container text-center" style="margin-top: 40px;">
+            <div class="row g-4">
+              <div class="col">
+                <div class="card h-100" style="width: 100%; background-color: #f8f8ee;">
+                  <img src="../image/monkeyForest.JPG" class="card-img-top" alt="..." style="object-fit: cover; height: 200px;">
+                  <div class="card-body d-flex flex-column" style="text-align: left;">
+                    <h5 class="card-title" style="font-size: 15px;">Sangeh Monkey Forest</h5>
+                    <p class="card-text" style="font-size: 8px;">Sangeh Monkey Forest:  tempat wisata yang terkenal dengan monyet berkeliaran dengan bebas dan dikeramatkan penduduk setempat di hutan.</p>
+                    <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100" style="width: 100%; background-color: #f8f8ee;">
+                  <img src="../image/PuraPucak.JPG" class="card-img-top" alt="..." style="object-fit: cover; height: 200px;">
+                  <div class="card-body d-flex flex-column" style="text-align: left;">
+                    <h5 class="card-title" style="font-size: 15px;">Pura Pucak Bukit Sari</h5>
+                    <p class="card-text" style="font-size: 8px;">Pura Pucak Bukit Sari: Pura yang terletak di dalam hutan kawasan Monker Forest Sangeh</p>
+                    <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100" style="width: 100%; background-color: #f8f8ee;">
+                  <img src="../image/Mumbul.jpg" class="card-img-top" alt="..." style="object-fit: cover; height: 200px;">
+                  <div class="card-body d-flex flex-column" style="text-align: left;">
+                    <h5 class="card-title" style="font-size: 15px;">Taman Mumbul</h5>
+                    <p class="card-text" style="font-size: 8px;">Taman Mumbul: Danau indah yang terletak di Desa Sangeh</p>
+                    <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100" style="width: 100%; background-color: #f8f8ee;">
+                  <img src="../image/pancorSolas.jpg" class="card-img-top" alt="..." style="object-fit: cover; height: 200px;">
+                  <div class="card-body d-flex flex-column" style="text-align: left;">
+                    <h5 class="card-title" style="font-size: 15px;">Tirta taman mumbul pancoran solas</h5>
+                    <p class="card-text" style="font-size: 8px;">Tirta taman mumbul pancoran solas: Tempat melukad (membersihkan diri) yang terletak dekat dengan danau yang ada di sangeh</p>
+                    <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="F&B_destination">
+            <div class="F&B_destination_Title">
+              <h1 class="text-decoration-underline" style="text-align: center; margin-top: 30px; font-weight: bold;">Food & Beverage</h1>
+              <span class="space-between"></span>
+               <div class="container text-center" style="margin-top: 40px;">
+            <div class="row g-4">
+              <div class="col">
+                <div class="card h-100" style="width: 100%; background-color: #f8f8ee;">
+                  <img src="../image/menwenci.png" class="card-img-top" alt="..." style="object-fit: cover; height: 200px;">
+                  <div class="card-body d-flex flex-column" style="text-align: left;">
+                    <h5 class="card-title" style="font-size: 15px;">Babi Guling Men Wenci</h5>
+                    <p class="card-text" style="font-size: 8px;">Babi Guling Men Wenci: Warung makan sepesialis nasi campur babi</p>
+                    <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100" style="width: 100%; background-color: #f8f8ee;">
+                  <img src="../image/wbs.png" class="card-img-top" alt="..." style="object-fit: cover; height: 200px;">
+                  <div class="card-body d-flex flex-column" style="text-align: left;">
+                    <h5 class="card-title" style="font-size: 15px;">Warung Bali Sangeh</h5>
+                    <p class="card-text" style="font-size: 8px;">Warung Bali Sangeh: Restaurant spesialis ikan laut </p>
+                    <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100" style="width: 100%; background-color: #f8f8ee;">
+                  <img src="../image/mangboo.png" class="card-img-top" alt="..." style="object-fit: cover; height: 200px;">
+                  <div class="card-body d-flex flex-column" style="text-align: left;">
+                    <h5 class="card-title" style="font-size: 15px;">Mang Boo </h5>
+                    <p class="card-text" style="font-size: 8px;">Mang Boo: Restaurant spesialis makanan olahan kerbau</p>
+                    <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100" style="width: 100%; background-color: #f8f8ee;">
+                  <img src="../image/bledor.png" class="card-img-top" alt="..." style="object-fit: cover; height: 200px;">
+                  <div class="card-body d-flex flex-column" style="text-align: left;">
+                    <h5 class="card-title" style="font-size: 15px;">Sate Bledor</h5>
+                    <p class="card-text" style="font-size: 8px;">Sate Bledor: Warung makan spesialis sate babi</p>
+                    <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- contact us -->
+          <div class="contact_us" class="container-fluid" style="background-color: #7d9271;">
+            <div class="contact_us_title">
+              <h1 class="text-decoration-underline" style="text-align: center; margin-top: 30px; font-weight: bold;">Contact Us</h1>
+              <span class="space-between"></span>
+            </div>
+          <div class="container_cu" style="display: flex;">
+            <div class="for-images" style="padding-left: 240px;">
+              <img src="../image/download-removebg-preview.png" class="card-img-top" alt="..." style=" height: 400px; width: 400px;">
+            </div>
+            <div class="for-CU" style="padding-left: 90px; width: 80vh;" >
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nama</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Your message here</label>
+                <textarea class="form-control w-100" id="exampleFormControlTextarea1" rows="10" style="width: 300px;"></textarea>
+              </div>  
+            </div>
+          </div>
+          <!-- footer -->
+          <div class="footer">
+            <div class="footer-container">
+              <div class="footer-content">
+                <div class="footer-menu">
+                  <div class="footer-menu-title">
+                    <h1>Menu</h1>
+                    <span class="footer-title-underline"></span>
+                  </div>
+                  <ul class="footer-nav-link">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destination">Destination</a></li>
+                    <li><a href="#about_us">About Sangeh</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                  </ul>
+                </div>
+                <div class="footer-contact">
+                  <div class="footer-contact-title">
+                    <h1>Contact Us</h1>
+                    <span class="footer-title-underline"></span>
+                  </div>
+                  <ul class="footer-contact-link ">
+                    <li>
+                      <a href="mailto:example@gmail.com"
+                        >kintamanisekaliwiii@gmail.com</a
+                      >
+                    </li>
+                    <li><a href="#">082312345435</a></li>
+                  </ul>
+                </div>
+                <div class="footer-about">
+                  <div class="footer-about-title">
+                    <h1>About</h1>
+                    <span class="footer-title-underline"></span>
+                  </div>
+                  <p s>
+                    Sangeh adalah desa yang tenang di Bali, Indonesia, terkenal dengan Hutan Monyet Suci. Hutan ini menjadi rumah bagi ratusan monyet ekor panjang yang berkeliaran bebas di antara pohon-pohon pala yang tinggi. Sangeh menawarkan suasana yang damai, dengan pura, pepohonan hijau, dan atmosfer yang tenang, menjadikannya tempat yang populer bagi pengunjung yang mencari keindahan alam dan pengalaman budaya.
+                  </p>
+                </div>
+              </div>
+              <div class="footer-line"></div>
+              <div class="copyright">
+                <p>© 2024 SANGEH. All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
